@@ -1,0 +1,32 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.3'
+	id 'io.spring.dependency-management' version '1.1.3'
+}
+
+group = 'com.sqs.producer-consumer'
+description = 'This is a sample project for AWS SQS message posting to queque and reading from queue.'
+
+version = '2023.01.01-RELEASE'
+
+java {
+	sourceCompatibility = '17'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web' //this dependency is only used for the controller
+	implementation 'io.awspring.cloud:spring-cloud-aws-starter-sqs'
+	compileOnly 'org.projectlombok:lombok'
+	
+	
+dependencyManagement {
+        imports {
+            mavenBom "io.awspring.cloud:spring-cloud-aws-dependencies:3.0.2"
+        }
+    }
+}
+

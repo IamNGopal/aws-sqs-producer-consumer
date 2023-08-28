@@ -1,0 +1,7 @@
+cloud:
+  aws:
+   region: eu-north-1
+   credentials:
+    accessKey: xxxxxxxxxxx
+    secretKey: xxxxxxxxxxx
+   queue.name: test-queue-1
